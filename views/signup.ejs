@@ -1,0 +1,84 @@
+<%- include('partials/header'); -%>
+    <header class="pageHeader">
+        <div class="container1 container2">
+            <form action="/signup" id="signupForm" class="box">
+                <h5>Sign up</h5>
+                <input type="text" id="firstName" name="firstName" placeholder="Name" autocomplete="off" required />
+                <div id="divFirstName" class="error"></div>
+                <input type="text" id="email" name="email" placeholder="Email" autocomplete="off" required />
+                <div id="divEmail" class="error"></div>
+                <div class="password-container">
+                    <input type="password" name="password" placeholder="Password" id="password" autocomplete="off"
+                        required />
+                    <i class="fa-solid fa-eye" id="eye"></i>
+                    <div id="divPassword" class="error"></div>
+                    <button type="submit" class="btnSign btnSignUp">Sign up</button>
+            </form>
+            <a href="/login" class="signInLink">Already have an account? Sign in</a>
+        </div>
+    </header>
+
+    <script src="https://unpkg.com/sweetalert@latest"></script>
+    <script>
+        const Swal = swal;
+
+        //show/hide an input field password
+        const pwd = document.getElementById('password');
+        const eye = document.getElementById('eye');
+        eye.addEventListener('click', togglePass);
+        function togglePass() {
+            eye.classList.toggle('active');
+            (pwd.type == 'password') ? pwd.type = 'text' : pwd.type = 'password';
+        }
+
+        const signupForm = document.getElementById('signupForm');
+
+        signupForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            //get properties value
+            const firstName = document.getElementById('firstName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const res = await fetch('/signup', {
+                    method: 'POST',
+                    body: JSON.stringify({ firstName, email, password }),
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                const data = await res.json();
+                console.log(data);
+                if (data.errors) {
+                    if (data.errors.email) {
+                        Swal({
+                            icon: 'error',
+                            title: 'Oops!',
+                            text: data.errors.email,
+                        })
+                    }
+                    else if (data.errors.firstName) {
+                        Swal({
+                            icon: 'error',
+                            title: 'Oops!',
+                            text: data.errors.firstName,
+                        })
+                    }
+                    else if (data.errors.password) {
+                        Swal({
+                            icon: 'error',
+                            title: 'Oops!',
+                            text: data.errors.password,
+                        })
+                    }
+                }
+                if (data.user) {
+                    location.assign('/');
+                }
+            }
+            catch (err) {
+                console.log(err);
+            }
+        });
+    </script>
+    <%- include('partials/footer'); -%>

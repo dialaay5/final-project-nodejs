@@ -1,0 +1,14 @@
+{
+    "express": {
+        "port": 3000
+    },
+    "logger": {
+        "level": "info"
+    },
+    "mongoDb": {
+        "connection": "mongodb://root:rootpassword@localhost:27022/faceBookDb?authSource=admin"
+    },
+    "mongoDbTest": {
+        "connection": "mongodb://root:rootpassword@localhost:27022/faceBookDb-test?authSource=admin"
+    }
+}

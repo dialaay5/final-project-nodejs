@@ -1,0 +1,75 @@
+<%- include('partials/header'); -%>
+    <header class="pageHeader">
+        <div class="container1">
+            <form action="/login" id="loginForm" class="box">
+                <h5>Sign in to your account</h5>
+                <input type="text" name="email" id="email" placeholder="Email" autocomplete="off" required />
+                <div class="password-container">
+                    <input type="password" name="password" placeholder="Password" id="password" autocomplete="off"
+                        required />
+                    <i class="fa-solid fa-eye" id="eye"></i>
+                </div>
+                <input type="checkbox" class="my-checkbox" id="remember" />
+                <small class="rmb">Remember me</small>
+                <button type="submit" class="btnSign">Sign in</button>
+            </form>
+            <a href="/signup" class="signUpLink">Don’t have an account? Sign up</a>
+        </div>
+    </header>
+
+    <script src="https://unpkg.com/sweetalert@latest"></script>
+    <script>
+        const Swal = swal;
+
+        //show/hide an input field password
+        const pwd = document.getElementById('password');
+        const eye = document.getElementById('eye');
+        eye.addEventListener('click', togglePass);
+        function togglePass() {
+            eye.classList.toggle('active');
+            (pwd.type == 'password') ? pwd.type = 'text' : pwd.type = 'password';
+        }
+
+        const form = document.getElementById('loginForm');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            //get properties value
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const rememberCheckbox = document.getElementById("remember").checked;
+
+            try {
+                const res = await fetch('/login', {
+                    method: 'POST',
+                    body: JSON.stringify({ email, password, rememberCheckbox }),
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                const data = await res.json();
+                console.log(data);
+                if (data.errors) {
+                    if (data.errors.email) {
+                        Swal({
+                            icon: 'error',
+                            title: 'Oops!',
+                            text: data.errors.email,
+                        })
+                    }
+                    if (data.errors.password) {
+                        Swal({
+                            icon: 'error',
+                            title: 'Oops!',
+                            text: data.errors.password,
+                        })
+                    }
+                }
+                if (data.user) {
+                    location.assign('/');
+                }
+            }
+            catch (err) {
+                console.log(err);
+            }
+        });
+    </script>
+    <%- include('partials/footer'); -%>

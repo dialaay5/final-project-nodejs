@@ -1,0 +1,165 @@
+const userModel = require("../models/newUser");
+const jwt = require('jsonwebtoken');
+const logger = require('../logger/my_logger');
+
+
+//handle errors during user authentication and registration
+const handleErrors = (err) => {
+    console.log(err.message, err.code);
+    let errors = { firstName: '', email: '', password: '' };
+
+    //1- when a user tries to log in with incorrect email or password
+    if (err.message === 'User not found!') {
+        errors.email = 'That email is not registered';
+    }
+
+    if (err.message === 'Invalid password!') {
+        errors.password = 'That password is incorrect';
+    }
+
+    //2- when a user tries to register with an email or name that already exists in the database
+    if (err.code === 11000 && !err.keyValue.firstName) {
+        errors.email = 'email address already exists';
+    }
+    if (err.code === 11000 && err.keyValue.firstName) {
+        errors.firstName = 'name is already registered';
+    }
+
+    //3- fail validation rules for fields
+    if (err.message.includes('Users validation failed')) {
+        Object.values(err.errors).forEach(({ properties }) => {
+            if (properties.path === 'email') {
+                errors.email = properties.message;
+            } else if (properties.path === 'firstName') {
+                errors.firstName = properties.message;
+            } else if (properties.path === 'password') {
+                errors.password = properties.message;
+            }
+        });
+    }
+    return errors;
+}
+
+// creating jwt using the jsonwebtoken library
+const maxAge = 30 * 24 * 60 * 60; //token expiration time (30 days)
+const secretTokenKey = 'mypk';
+const createToken = (id) => {
+    //jwt.sign() is used to create the token
+    return jwt.sign({ id }, secretTokenKey, {
+        expiresIn: maxAge
+    });
+};
+const sessionMaxAge = 30 * 60; //session token expiration time (30 minutes )
+const secretSessionKey = 'sessionpk';
+const createSessionToken = (id) => {
+    return jwt.sign({ id }, secretSessionKey, {
+        expiresIn: sessionMaxAge
+    });
+};
+
+// controller actions
+
+//GET requests for the signup and login pages.
+//They render the respective views (signup.ejs , login.ejs) to display the signup and login forms
+module.exports.signup_get = (req, res) => {
+    res.render('signup');
+}
+
+module.exports.login_get = (req, res) => {
+    res.render('login');
+}
+
+// POST request for user signup
+module.exports.signup_post = async (req, res) => {
+    const { firstName, email, password } = req.body;
+
+    try {
+        const user = await userModel.create({ firstName, email, password });
+        const token = createToken(user._id);
+        res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });
+        logger.info(`registration was successful with user id : ${user._id}`);
+        res.status(200).json({ user: user._id });
+    }
+    catch (err) {
+        const errors = handleErrors(err);
+        logger.error(`error during user sign up ${err.message}`);
+        res.status(400).json({ errors });
+    }
+
+}
+
+//POST request for user login
+module.exports.login_post = async (req, res) => {
+    const { email, password, rememberCheckbox } = req.body;
+
+    try {
+        const user = await userModel.login(email, password);
+        if (rememberCheckbox) {
+            // If remember me checkbox is checked, create and set a jwt token
+            const token = createToken(user._id);
+            res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });
+        }
+        else {
+            // If remember me checkbox is not checked, create and set a session token
+            const sessionToken = createSessionToken(user._id);
+            res.cookie('session', sessionToken, { httpOnly: true, sessionMaxAge: sessionMaxAge * 1000 });
+        }
+        logger.info(`login was successful with user id : ${user._id}`);
+        res.status(200).json({ user: user._id });
+    }
+    catch (err) {
+        const errors = handleErrors(err);
+        logger.error(`error during user login ${err.message}`);
+        res.status(400).json({ errors });
+    }
+}
+
+//PUT request for adding user friends list
+module.exports.friendsList_post = async (req, res) => {
+    const { selected_friends_list } = req.body;
+    const id = res.locals.userId;
+
+    try {
+        if (selected_friends_list.length != 0) {
+            const user = await userModel.findByIdAndUpdate(id, { $set: { friendsList: selected_friends_list } });
+            //console.log("updated");
+            //console.log(selected_friends_list);
+            //console.log(user);
+            logger.info(`friends list was updated successfully`);
+            res.status(201).json({ user: user._id });
+        }
+        else {
+            logger.error(`friends list not updated because the user didn't choose any friends to be added`);
+            res.status(400).json('error');
+        }
+    }
+    catch (err) {
+        console.log(err);
+        logger.error(`error during updating the user friends list ${err.message}`);
+    }
+}
+
+//GET request for getting user best friends list and render the best friends page
+module.exports.bestFriendsList_get = async (req, res) => {
+    const id = res.locals.userId;
+
+    try {
+        const user = await userModel.findById(id);
+        const list_of_best_friends = user.friendsList;
+        //console.log(list_of_best_friends);
+        res.render('bestFriends', { list_of_best_friends });
+    }
+    catch (err) {
+        console.log(err);
+        logger.error(`error during GET the best friends list`)
+        res.status(500).json({ err: 'error' });
+    }
+}
+
+//GET request for user logout
+//redirects the user to the homepage
+module.exports.logout_get = (req, res) => {
+    res.cookie('jwt', '', { maxAge: 1 });
+    res.cookie('session', '', { sessionMaxAge: 1 });
+    res.redirect('/');
+}

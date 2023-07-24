@@ -1,0 +1,165 @@
+<%- include('partials/header'); -%>​
+    <header class="friendsPageHeader">
+
+        <body style="background-color: rgb(82, 82, 181); background-image: url(' ') " action="/selectFriends">
+            <button class="btnAdd" id="addBtn"><i class="material-icons"
+                    style="font-size:40px; color:rgb(15, 42, 195)">person_add</i> Add New Friends List</button>
+            <div>
+                <div class="friends-container" id="Container"></div>
+            </div>
+        </body>
+    </header>
+
+    <script src="https://unpkg.com/sweetalert@latest"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        const Swal = swal;
+        const data = [{
+            Id: 1,
+            Picture: 'https://randomuser.me/api/portraits/med/women/82.jpg',
+            Name: 'Lisa Jensen',
+            Email: 'lisa.jensen@example.com',
+        },
+        {
+            Id: 2,
+            Picture: 'https://randomuser.me/api/portraits/med/women/27.jpg',
+            Name: 'Lola Pena',
+            Email: 'lola.pena@example.com',
+        },
+        {
+            Id: 3,
+            Picture: 'https://randomuser.me/api/portraits/med/women/8.jpg',
+            Name: 'Potishana Kushniruk',
+            Email: 'potishana.kush@example.com',
+        },
+        {
+            Id: 4,
+            Picture: 'https://randomuser.me/api/portraits/med/women/55.jpg',
+            Name: 'Alma Nielsen',
+            Email: 'alma.nielsen@example.com',
+        },
+        {
+            Id: 5,
+            Picture: 'https://randomuser.me/api/portraits/med/women/17.jpg',
+            Name: 'June Evans',
+            Email: 'june.evans@example.com',
+        },
+        {
+            Id: 6,
+            Picture: 'https://randomuser.me/api/portraits/med/men/0.jpg',
+            Name: 'Albin Kürschner',
+            Email: 'albin.kurschner@example.com',
+        },
+        {
+            Id: 7,
+            Picture: 'https://randomuser.me/api/portraits/med/men/93.jpg',
+            Name: 'Andre Henry',
+            Email: 'andre.henry@example.com',
+        },
+        {
+            Id: 8,
+            Picture: 'https://randomuser.me/api/portraits/med/men/7.jpg',
+            Name: 'Renzo David',
+            Email: 'renzo.david@example.com',
+        },
+        {
+            Id: 9,
+            Picture: 'https://randomuser.me/api/portraits/med/women/18.jpg',
+            Name: 'Mia Harris',
+            Email: 'mia.harris@example.com',
+        },
+        {
+            Id: 10,
+            Picture: 'https://randomuser.me/api/portraits/med/women/16.jpg',
+            Name: 'Nalan Kaya',
+            Email: 'nalan.kaya@example.com',
+        },
+        {
+            Id: 11,
+            Picture: 'https://randomuser.me/api/portraits/med/women/93.jpg',
+            Name: 'Amy Walle',
+            Email: 'amy.walle@example.com',
+        },
+        {
+            Id: 12,
+            Picture: 'https://randomuser.me/api/portraits/med/women/29.jpg',
+            Name: 'Citlali Molina',
+            Email: 'citlali.molina@example.com',
+        }]
+        //array list of all the friends
+        const all_friends = [];
+
+        //create friends cards
+        async function friends_list() {
+            try {
+                for (let i = 0; i < data.length; i++) {
+                    $('#Container').append(`<div class="friend">
+                                         <img class="card-img" src="${data[i].Picture}">
+                                         <h5 class="card-friendName">${data[i].Id + "-" + data[i].Name}</h5>
+                                         <p class="card-friendEmail">${data[i].Email}</p>
+                                         <input type="checkbox" class="select-checkbox" id="select${i}" />
+                                         <small class="select"><b>select</b></small></div>`)
+                    all_friends.push(data[i])
+                }
+
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+
+        friends_list();
+        console.log(all_friends);
+        const add_button = document.getElementById('addBtn');
+
+        //array list of the selected friends
+        const selected_friends_list = [];
+
+        add_button.addEventListener('click', create_friends_list);
+        async function create_friends_list() {
+
+            for (let i = 0; i < all_friends.length; i++) {
+                const is_selected = document.getElementById(`select${i}`).checked;
+
+                //check if a friend is selected and not already added to the selected friends list
+                if (is_selected && !selected_friends_list.includes(all_friends[i])) {
+                    selected_friends_list.push(all_friends[i]);
+                }
+            }
+            console.log(selected_friends_list);
+
+
+            try {
+                const res = await fetch('/selectFriends', {
+                    method: 'PUT',
+                    body: JSON.stringify({ selected_friends_list }),
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                const data = await res.json();
+                console.log(data);
+                if (data.user) {
+                    Swal({
+                        icon: 'success',
+                        title: 'Awesome !',
+                        text: "adding friends successfully",
+                    }).then(function () {
+                        location.assign('/');
+                    });
+                }
+                else {
+                    Swal({
+                        icon: 'error',
+                        title: 'Oops!',
+                        text: "select friends to add",
+                    })
+                }
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+
+
+    </script>
+    <%- include('partials/footer'); -%>

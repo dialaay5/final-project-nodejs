@@ -1,0 +1,618 @@
+{
+  message: 'login was successful with user id : 64ab558c9920c50a7e3449d0',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-07-18T11:11:36.971Z'
+}
+{
+  message: 'error during user sign up Users validation failed: firstName: Minimum name length is 4 characters',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-18T11:12:36.788Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: node-auth.users index: firstName_1 dup key: { firstName: "diala" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-18T11:12:59.406Z'
+}
+{
+  message: 'login was successful with user id : 64ab558c9920c50a7e3449d0',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T11:13:37.960Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T11:14:06.986Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T11:19:46.303Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T11:54:14.629Z'
+}
+{
+  message: 'error during GET the best friends list',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:11:59.421Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:20:57.962Z'
+}
+{
+  message: "error during updating the user friends list Cannot read properties of null (reading '_id')",
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:20:57.974Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:21:20.431Z'
+}
+{
+  message: "error during updating the user friends list Cannot read properties of null (reading '_id')",
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:21:20.434Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:30:22.806Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:32:22.619Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: node-auth.users index: lastName_1 dup key: { lastName: null }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:33:42.506Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: node-auth.users index: lastName_1 dup key: { lastName: null }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:33:53.011Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: node-auth.users index: lastName_1 dup key: { lastName: null }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:34:33.216Z'
+}
+{
+  message: 'registration was successful with user id : 64b6880f492b33e48e116071',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:39:43.985Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:39:51.774Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:41:08.446Z'
+}
+{
+  message: 'error during user login Invalid password!',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:41:43.162Z'
+}
+{
+  message: 'error during user sign up faceBookUsers validation failed: firstName: Minimum name length is 4 characters',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:42:00.028Z'
+}
+{
+  message: 'registration was successful with user id : 64b6889e492b33e48e116088',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:42:06.424Z'
+}
+{
+  message: 'login was successful with user id : 64b6880f492b33e48e116071',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:42:52.326Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBook-db.facebookusers index: firstName_1 dup key: { firstName: "yhya" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:48:03.982Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBook-db.facebookusers index: email_1 dup key: { email: "yhya@gmail.com" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-18T12:48:22.935Z'
+}
+{
+  message: 'login was successful with user id : 64b6880f492b33e48e116071',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T13:28:36.297Z'
+}
+{
+  message: 'login was successful with user id : 64b6889e492b33e48e116088',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T13:29:06.395Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T13:29:17.633Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T13:29:48.447Z'
+}
+{
+  message: 'login was successful with user id : 64b6880f492b33e48e116071',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T14:33:10.946Z'
+}
+{
+  message: 'login was successful with user id : 64b6880f492b33e48e116071',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T15:29:01.655Z'
+}
+{
+  message: 'login was successful with user id : 64b6880f492b33e48e116071',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T15:29:23.992Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T15:29:43.119Z'
+}
+{
+  message: 'error during user login User not found!',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-18T16:44:42.564Z'
+}
+{
+  message: 'login was successful with user id : 64b6880f492b33e48e116071',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-18T16:45:59.166Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T18:58:22.546Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T18:59:02.247Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T19:28:08.025Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T19:28:40.259Z'
+}
+{
+  message: 'login was successful with user id : 64b6880f492b33e48e116071',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T19:29:20.011Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:09:26.179Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:17:18.128Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:17:26.275Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:20:08.277Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:21:04.653Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:30:41.246Z'
+}
+{
+  message: 'friends list is empty',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:31:03.395Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:31:36.534Z'
+}
+{
+  message: 'friends list is empty',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:31:44.340Z'
+}
+{
+  message: 'friends list is empty',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:35:46.722Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:35:53.342Z'
+}
+{
+  message: "friends list not updated because the user didn't choose any friends to be added",
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:41:36.219Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:42:07.653Z'
+}
+{
+  message: 'error during user login User not found!',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:49:38.628Z'
+}
+{
+  message: 'login was successful with user id : 64b6880f492b33e48e116071',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:50:12.118Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-23T20:50:24.114Z'
+}
+{
+  message: 'error during user login res.cookie is not a function',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T10:18:31.969Z'
+}
+{
+  message: 'error during user login res.cookie is not a function',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T10:32:07.615Z'
+}
+{
+  message: 'error during user login res.cookie is not a function',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T10:32:42.128Z'
+}
+{
+  message: 'error during user login res.cookie is not a function',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T10:53:43.327Z'
+}
+{
+  message: 'login was successful with user id : 64be58acb19bc3117513e08b',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T10:55:40.814Z'
+}
+{
+  message: 'login was successful with user id : 64be58fdba6289e61a73f1fd',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T10:57:02.124Z'
+}
+{
+  message: 'login was successful with user id : 64be59348fc006be53927ed5',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T10:57:56.367Z'
+}
+{
+  message: 'login was successful with user id : 64be6c3b531079ce4c8d1db4',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T12:19:07.887Z'
+}
+{
+  message: 'login was successful with user id : 64be6c7af80ff154e1e0841f',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T12:20:10.777Z'
+}
+{
+  message: 'login was successful with user id : 64be6d42692864cecee44795',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T12:23:30.923Z'
+}
+{
+  message: 'login was successful with user id : 64be6def28bf11b592d4c521',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T12:26:23.977Z'
+}
+{
+  message: 'login was successful with user id : 64be737dfeb188ef15205005',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T12:50:06.116Z'
+}
+{
+  message: 'login was successful with user id : 64be73962c5e6f44546ba0d9',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T12:50:30.380Z'
+}
+{
+  message: 'login was successful with user id : 64be73af871942dce7003da6',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T12:50:55.204Z'
+}
+{
+  message: 'login was successful with user id : 64be85a919ccf4f2212e6985',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:07:37.989Z'
+}
+{
+  message: 'login was successful with user id : 64be85e3e9d03d9ed80c8cff',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:08:36.085Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBook-db-test.facebookusers index: firstName_1 dup key: { firstName: "yaniv" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:08:36.161Z'
+}
+{
+  message: 'login was successful with user id : 64be87c72064f82789c17c42',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:16:40.090Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBook-db-test.facebookusers index: firstName_1 dup key: { firstName: "yaniv" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:16:40.166Z'
+}
+{
+  message: 'login was successful with user id : 64be88ee1c2a3682595cc64c',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:21:34.887Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBook-db-test.facebookusers index: firstName_1 dup key: { firstName: "yaniv" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:21:34.962Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBook-db.facebookusers index: firstName_1 dup key: { firstName: "diala" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:24:20.927Z'
+}
+{
+  message: 'registration was successful with user id : 64be89aea2d16828cc225c3f',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:24:46.698Z'
+}
+{
+  message: 'error during user login Invalid password!',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:25:11.568Z'
+}
+{
+  message: 'login was successful with user id : 64b6880f492b33e48e116071',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:25:16.444Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:25:28.395Z'
+}
+{
+  message: "friends list not updated because the user didn't choose any friends to be added",
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:25:34.993Z'
+}
+{
+  message: 'error during user login res.cookie is not a function',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:32:07.801Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBook-db-test.facebookusers index: firstName_1 dup key: { firstName: "yaniv" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:32:07.879Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBook-db-test.facebookusers index: firstName_1 dup key: { firstName: "yaniv" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:33:34.901Z'
+}
+{
+  message: 'error during user login res.cookie is not a function',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:45:57.128Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBook-db-test.facebookusers index: firstName_1 dup key: { firstName: "yaniv" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:45:57.209Z'
+}
+{
+  message: 'login was successful with user id : 64be91c5527d5cd1c9d6cc48',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:59:17.901Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBook-db-test.facebookusers index: firstName_1 dup key: { firstName: "yaniv" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T14:59:17.979Z'
+}
+{
+  message: 'login was successful with user id : 64be9294dd3c29cabe6f9c5e',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:02:45.037Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBook-db-test.facebookusers index: firstName_1 dup key: { firstName: "yaniv" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:02:45.114Z'
+}
+{
+  message: 'login was successful with user id : 64be92d167deb03b77bae3b4',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:03:45.593Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBook-db-test.facebookusers index: firstName_1 dup key: { firstName: "yaniv" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:03:45.670Z'
+}
+{
+  message: 'login was successful with user id : 64b6880f492b33e48e116071',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:05:44.068Z'
+}
+{
+  message: 'login was successful with user id : 64b6880f492b33e48e116071',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:10:15.854Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:10:36.482Z'
+}
+{
+  message: 'error during user login User not found!',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:23:43.932Z'
+}
+{
+  message: 'registration was successful with user id : 64be9797c0b4286cf5fd9d14',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:24:07.384Z'
+}
+{
+  message: 'friends list was updated successfully',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:24:21.009Z'
+}
+{
+  message: 'login was successful with user id : 64be97e7d61816e193861daa',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:25:27.287Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBookDb-test.facebookusers index: firstName_1 dup key: { firstName: "yaniv" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:25:27.364Z'
+}

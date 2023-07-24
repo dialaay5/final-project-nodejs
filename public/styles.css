@@ -1,0 +1,331 @@
+body {
+    margin: 20px 40px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    background-image: url("/facebook.jfif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Georgia, serif;
+    position: absolute;
+
+}
+
+/* header page css */
+h1 a {
+    font-family: Georgia, serif;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #5c7fda;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 400px;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav li.a {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+nav li a {
+    font-weight: 1000;
+    font-size: 0.9em;
+    padding: 10px 30px;
+    letter-spacing: 2px;
+}
+
+.btn {
+    border-radius: 40px;
+    background: #f4f4f4;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    width: 300px;
+    height: 210px;
+    border-radius: 60px;
+    margin-left: 30px;
+}
+
+header h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-right: 620px;
+    margin-top: 0.5px;
+    color: #e7e5e5;
+}
+
+header h3 {
+    font-size: 25px;
+    margin-bottom: 2px;
+    margin-left: 20px;
+    margin-top: 1px;
+    color: #e7e5e5;
+}
+
+.btnFriends {
+    border-radius: 40px;
+    background: #f4f4f4;
+    padding: 10px 30px;
+    font-weight: 1000;
+    font-size: 1em;
+    margin-left: -25px;
+    margin-right: 30px;
+}
+
+/* login page css */
+.pageHeader {
+    margin-bottom: 412px;
+}
+
+.container1 {
+    top: 120px;
+    left: 25%;
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: rgb(41, 49, 74);
+    border-radius: 9px;
+    border-top: 10px solid#f3fff0;
+    border-bottom: 10px solid #f95b56;
+    width: 400px;
+    height: 400px;
+}
+
+.box h5 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #b6c1e1;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+    font-family: Georgia, serif;
+    display: block;
+    margin: 15px auto;
+    background: #323b57;
+    border: 0;
+    border-radius: 5px;
+    padding: 14px 10px;
+    width: 320px;
+    outline: none;
+    color: #d6d6d6;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+::-webkit-input-placeholder {
+    color: #565f79;
+    font-size: 16px;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    border: 1px solid #92b6fd;
+}
+
+.password-container {
+    width: 400px;
+    position: relative;
+}
+
+.fa-eye {
+    position: absolute;
+    top: 28%;
+    right: 12%;
+    cursor: pointer;
+    color: lightgray;
+}
+
+.fa-eye.active {
+    color: #7f60eb;
+}
+
+.btnSign {
+    border: 0;
+    background: #5c7fda;
+    color: #dfdeee;
+    border-radius: 100px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    position: absolute;
+    top: 69%;
+    left: 25%;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+}
+
+.btnSign:hover {
+    background: #5d33e6;
+}
+
+.my-checkbox {
+    transform: scale(2);
+    position: relative;
+    cursor: pointer;
+    left: 11%;
+}
+
+
+.rmb {
+    font-family: Georgia, serif;
+    position: absolute;
+    margin-left: 13%;
+    color: #dfdeee;
+    font-size: 15px;
+}
+
+.signUpLink {
+    position: absolute;
+    font-family: Georgia, serif;
+    top: 88%;
+    left: 15%;
+}
+
+/* sign up page css */
+.container2 {
+    height: 417px;
+}
+
+.btnSignUp {
+    top: 125%;
+}
+
+.signInLink {
+    position: absolute;
+    font-family: Georgia, serif;
+    top: 260%;
+    left: 11%;
+}
+
+/*selectFriends page css */
+.friends-container {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 40px;
+    grid-column-gap: 30px;
+    margin-left: 110px;
+    margin-top: 30px;
+}
+
+.friend {
+    display: inline-block;
+    border-radius: 20px;
+    background: rgb(233, 232, 232);
+    position: relative;
+    text-align: center;
+    padding: 0 20px 30px 20px;
+    height: 150px;
+    width: 240px;
+}
+
+.card-img {
+    height: 100px;
+    width: 100px;
+    margin: -30px auto 20px;
+}
+
+.card-friendName {
+    font-size: 16px;
+    margin-top: 1px;
+}
+
+.card-friendEmail {
+    margin-top: -10px;
+    font-size: 16px;
+    color: #888;
+}
+
+.friendsPageHeader {
+    margin-bottom: -170px;
+    display: grid;
+}
+
+.select-checkbox {
+    transform: scale(1.5);
+    position: relative;
+    cursor: pointer;
+    left: -30px;
+}
+
+.select {
+    font-family: Georgia, serif;
+    position: absolute;
+    margin-left: -20px;
+    color: #635bcb;
+    font-size: 15px;
+}
+
+.btnAdd {
+    border-radius: 40px;
+    background: rgb(233, 232, 232);
+    font-weight: 1000;
+    font-size: 25px;
+    margin: auto;
+    width: 400px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    cursor: pointer;
+
+}
+
+/*bestFriends page css */
+.bestFriendsPageHeader {
+    margin-bottom: 1px;
+
+}
+
+.backBtn {
+    border-radius: 50%;
+    background: rgb(168, 169, 167);
+    width: 100px;
+    cursor: pointer;
+}
+
+/* footer css */
+footer {
+    position: relative;
+    text-align: center;
+    margin-top: 200px;
+    color: #aaa;
+    font-family: Georgia, serif;
+}

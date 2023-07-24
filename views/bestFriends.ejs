@@ -1,0 +1,38 @@
+<%- include('partials/header'); -%>
+    <header class="bestFriendsPageHeader">
+
+        <body style="background-color: rgb(82, 82, 181); background-image: url(' ') " action="/selectFriends">
+            <div>
+                <button class="backBtn" id="backBtn" onClick="location.assign('/')"><i class="material-icons"
+                        style="font-size:40px; color:rgb(236, 239, 254)">arrow_back</i></button>
+                <div class="friends-container" id="Container">
+                    <% if (list_of_best_friends.length==0) { %>
+                        <script src="https://unpkg.com/sweetalert@latest"></script>
+                        <script>
+                            const Swal = swal;
+                            Swal({
+                                icon: 'error',
+                                title: 'Oops!',
+                                text: "Friends List Empty",
+                            }).then(function () {
+                                location.assign('/selectFriends');
+                            });
+                        </script>
+                        <% } else { %>
+                            <% for (let i=0; i < list_of_best_friends.length; i++) { %>
+                                <div class="friend">
+                                    <img class="card-img" src="<%= list_of_best_friends[i].Picture %>">
+                                    <h5 class="card-friendName">
+                                        <%= list_of_best_friends[i].Name %>
+                                    </h5>
+                                    <p class="card-friendEmail">
+                                        <%= list_of_best_friends[i].Email %>
+                                    </p>
+                                </div>
+                                <% } %>
+                                    <% } %>
+                </div>
+            </div>
+        </body>
+    </header>​
+    <%- include('partials/footer'); -%>
