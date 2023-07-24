@@ -616,3 +616,21 @@
   label: 'right now!',
   timestamp: '2023-07-24T15:25:27.364Z'
 }
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBookDb.facebookusers index: firstName_1 dup key: { firstName: "diala" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:33:01.237Z'
+}
+{
+  message: 'login was successful with user id : 64be99d687d32f379814e275',
+  level: 'info',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:33:42.712Z'
+}
+{
+  message: 'error during user sign up E11000 duplicate key error collection: faceBookDb-test.facebookusers index: firstName_1 dup key: { firstName: "yaniv" }',
+  level: 'error',
+  label: 'right now!',
+  timestamp: '2023-07-24T15:33:42.788Z'
+}
